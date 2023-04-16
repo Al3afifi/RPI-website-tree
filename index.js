@@ -1,21 +1,13 @@
-var data = [
-    {
-        "firstName": "Jhon",
-        "lastName": "Smith"
-    },
-    {
-        "firstName": "Bob",
-        "lastName": "Ross"
-    },
-    {
-        "firstName": "Jhon",
-        "lastName": "Doe"
-    }
-]
+$(document).ready(function(){
 
-for (var i in data){
-    var row = <div>
-        <div>$data[i].firstName</div>
-        <div>$data[i].lastName</div>
-    </div>
-}
+    $.getJSON("test.json", function(data){
+        console.log(data)
+
+        $('.percentage').html(data.percentage);
+        $('.omni').html(data.online);
+        $('.shipping').html(data.shipping);
+
+    }).fail(function(){
+        console.log("Check code")
+    })
+})
