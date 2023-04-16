@@ -1,90 +1,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<li><a href="index.html">HOME</a></li>
+<li><a href="table.html">TABLE</a></li>
+
 <table class="table table-striped">
     <tr class="bg-info">
         <th>Name</th>
-        <th>Link</th>
+        <th>Description</th>
     </tr>
     <tbody id="myTable">
 
     </tbody>
 </table>
 
-<script>
-    var ourTable = [
-        {
-            "name": "RPI Official Website",
-            "description": "Official home page for RPI",
-            "link": "https://www.rpi.edu/",
-            "tags": [
-                "Official"
-            ]
-        },
-        {
-            "name": "SIS",
-            "description": "Rensselaer's Student Information System",
-            "link": "https://sis.rpi.edu/",
-            "tags": [
-                "Official",
-                "Courses",
-                "Degrees"
-            ]
-        },
-        {
-            "name": "Degree works",
-            "description": "Check how far are you from graduating, and what requirments you have left",
-            "link": "https://degreeworksprd.rpi.edu:8708/degwx/RespDashboard/worksheets/WEB31",
-            "tags": [
-                "Official",
-                "Courses",
-                "Degrees"
-            ]
-        },
-        {
-            "name": "Rensselaer Catalog",
-            "description": "Check all the courses, programs, and other important general information",
-            "link": "http://catalog.rpi.edu/",
-            "tags": [
-                "Official",
-                "Courses",
-                "Degrees"
-            ]
-        },
-        {
-            "name": "QUACS",
-            "description": "Questionably Accurate Course Scheduler for RPI",
-            "link": "https://quacs.org/",
-            "tags": [
-                "RCOS",
-                "Courses",
-                "Organization"
-            ]
-        },
-        {
-            "name": "CRISIS",
-            "description": "Correcting Rensselaer's Insufferable SIS",
-            "link": "https://rpicrisis.org/",
-            "tags": [
-                "RCOS",
-                "Courses",
-                "Degrees",
-                "Organization"
-            ]
-        }
-    ]
-
-    buildTable(ourTable)
-
-    function buildTable(data){
-        var table = document.getElementById('myTable')
-
-        for(var i = 0; i < data.length; i++){
-            var row = `
-                <tr>
-                    <td>${data[i].name}</td>
-                    <td>${data[i].link}</td>
-                </tr>
-            `
-            table.innerHTML += row
-        }
-    }
+<script src="table.js">
+    
 </script>

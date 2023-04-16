@@ -73,22 +73,19 @@ function buildTable(data, categories){
     var table = document.getElementById('myTable')
 
     for(var c = 0; c < categories.length; c++){
-        var cTitle = `<span class="each-cat">
-            <h2>${categories[c]}</h3>`
+        var cTitle = `<h2>${categories[c]}</h3>`
         table.innerHTML += cTitle
         for(var i = 0; i < data.length; i++){
             if(data[i].tags.includes(categories[c])){
                 var row = `
-                    <span class="individual-website">
-                        <div><a href="${data[i].link}" target="_blank">${data[i].name}</a></td>
-                        <div>${data[i].description}</td>
+                    <tr>
+                        <td><a href="${data[i].link}" target="_blank">${data[i].name}</a></td>
+                        <td>${data[i].description}</td>
                     </tr>
                 `
                 table.innerHTML += row
             }
         }
-        var endTitle = `</span>`
-        table.innerHTML += endTitle
     }
     
 }

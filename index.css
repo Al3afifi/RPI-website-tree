@@ -59,24 +59,19 @@ html, body{
 
 .main-header{
     background-color: rgba(0, 0, 0, .5);
-    background-image: url("images/love.png");
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 50px;
 }
 
-.band-name{
+.title-name{
     text-align: center;
     margin: 0;
-    font-size: 4em;
+    font-size: 2em;
     font-family: "Rossetti W00 Regular";
     font-family: "Kalam";
     font-weight: normal;
     color: white;
-}
-
-.band-name-large{
-    font-size: 5em;
 }
 
 .content-section{
@@ -95,14 +90,32 @@ html, body{
     color: rgb(255, 255, 255);
     text-align: center;
     font-size: 2.5em;
-}/**//**//**//**//**//**//**//**/
+}/**//**//**//**//**/
+
+.table{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.individual-website{
+    background-color: green;
+}
+
+.individual-website:hover{
+    font-size: 1.1em;
+}
 
 .main-footer{
     color: white;
     padding: .10em 0;
-    position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.each-cat{
+    display: flex;
+    flex-direction: row;
 }
 
 .main-footer-container{
@@ -122,52 +135,4 @@ html, body{
 .footer-nav img{
     width: 50px;
     height: 50px;
-}
-
-.tour-row{/**/
-    border-bottom: 1px solid black;
-    padding-bottom: 1em;
-    margin: 1em;
-}
-
-.tour-row:last-child{/**/
-    border-bottom: none;
-}
-
-.tour-item{/**/
-    display: inline-block;
-    padding-right: .5em;
-}
-
-.tour-date{/**/
-    color: rgb(207, 206, 206);
-    font-weight: bold;
-    width: 11%;
-}
-
-.tour-city{/**/
-    width: 24%;
-}
-
-.tour-arena{/**/
-    width: 42%;
-}
-
-.btn{/**/
-    width: 10%;
-    max-width: 100px;
-    font-weight: bold;
-    text-align: center;
-    
-    vertical-align: middle;
-    border: none;
-    border-radius: .3em;
-
-    cursor: pointer;
-    
-    color: rgb(255, 255, 255);
-    background-color: #000000;
-}
-.btn:hover{
-    background-color: #ff8f8f;
 }
